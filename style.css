@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css?family=Quantico:400,700|Roboto:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+:root {
+    --black: rgb(30, 30, 30);  
+    --green: rgb(14, 61, 59);
+    --yellow: #ffd944;   
+    --yellow2: #f8c000;   
+    --gray: #102438;
+    --lightGray: rgb(244, 244, 244);
+    --white: #fff;
+    --padding: 100px 0;
+    --sucGreen: #198754;
+    --headings: 3rem;
+    --fontSize: 16px;
+    --transition: .3s ease;
+}
+/***************
+basic styles
+***************/
+html{
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--siva);
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Quantico', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    transition: var(--transition);
+}
+/* ul{
+    list-style: none;
+} */
+h2{
+    color: var(--yellow2);
+    padding: 30px ;
+    text-align: center;
+}
+header{
+    background:linear-gradient(rgba(30, 30, 30,.8),rgba(30, 30, 30,.8)) , url(https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80);
+    height: 15vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1:hover,
+header p:hover{
+    user-select: none;
+    transition: var(--transition);
+}
+h1{
+    color: var(--yellow2);
+    font-size: 4rem;
+}
+header p{
+    color: var(--yellow2);
+    font-size: 1.3rem;
+    font-family: 'Dancing Script', 'cursive';
+}
+header span{
+    font-size: 1.3rem;
+    font-family: 'Roboto',sans-serif;
+}
+main{
+    /* height: 100vh; */
+    display: flex;
+}
+aside{
+    flex: 0 0 35%;
+    background-color: var(--green);
+    text-align: center;
+    padding: 0 50px;
+}
+section{
+    flex: 0 0 65%;
+}
+.btn-success{
+    background-color: var(--sucGreen);
+    border: none;
+}
+.btn-success:hover{
+    background-color: var(--green);
+    transition: var(--transition);
+    color: whitesmoke !important;
+    border: none;
+}
+.profile{
+    color: white;
+    text-align: left;
+}
+
+.about p,
+.contact p {
+    color: var(--white);
+    text-align: justify;
+}
+aside i{
+    color: var(--yellow2);
+    font-size: 1.5rem;
+}
+aside a{
+    color: var(--white);
+    text-decoration: underline;
+}
+aside a:hover{
+    color: var(--yellow2);
+}
+
+.achDiv{
+    text-align: justify;
+    color: var(--white);
+}
+
+
+.main-section {
+    
+    /* background:linear-gradient(rgba(255, 255, 255,.85),rgba(255, 255, 255,85)), url(https://images.unsplash.com/photo-1472437774355-71ab6752b434?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80); */
+    /* background-position: left;
+    background-size: cover; */
+    background-color: var(--lightGray);
+    padding: 0 100px;
+}
+
+.fa-html5{
+    color: #dd4b25;
+}
+.fa-css3-alt{
+    color:#264de4 ;
+}
+.fa-bootstrap{
+    color:#8112fa ;
+}
+.fa-sass{
+    color:#c76494 ;
+}
+.fa-database{
+    color:#dd8a00 ;
+}
+.fa-wordpress{
+    color:#17698d ;
+}
+.fa-react{
+    color:#08daff ;
+}
+.fa-node{
+    color:var(--green) ;
+}
+.fa-php{
+    color:#7377ad ;
+}
+.fa-js-square{
+    color:#efd81d ;
+}
+.fa-funnel-dollar{
+    color:var(--green) ;
+}
+.fa-microsoft{
+    color: #e43a00 ;
+}
+.it{
+    display: flex;
+    justify-content: space-between;
+}
+.col-6 i{
+    font-size: 2rem;
+    flex: 0 0 13%;
+    margin-bottom: 15px;
+    
+}
+
+.it p{
+    text-align: left;
+    font-size: 1rem;
+    color: var(--green);
+    /* margin-top: 5px; */
+    font-weight: bold;
+}
+.it span{
+    font-size: .8rem    ;
+    font-weight: normal;
+}
+
+
+.skill li{
+    text-align: left !important;
+}
+.skill{
+    flex: 0 0 49%;
+    color: var(--green);
+}
+.skill h2{
+    text-align: center;
+}
+.imgs img{
+    box-shadow: 0 0 25px white;
+    transition: .4s ease;
+    /* width: 100px; */
+    height: 220px ;
+}
+.imgs img:hover{
+    transform: scale(2);
+}
+
+
+footer{
+    font-size: 15px;
+    height: 5vh;
+    padding-top: 9px;
+}
+/* .education{
+    margin-left: 5%;
+} */
+.education ul
+{
+    text-align: left;
+    list-style: outside;
+    /* font-weight: bold; */
+    color: var(--green);
+}
+.education li{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+ul span{
+    font-size: .8rem;
+    font-weight: normal;
+}
+.education ul span:last-child{
+    font-size: .9rem;
+    font-weight: bold;
+}
+.education a{
+    font-size: 1rem;
+}
+
+
+
+.languages span{
+    font-weight: bold;
+}
+button{
+    border: none;
+}
+button:last-child{
+    background-color: transparent;
+    border: 2px solid var(--yellow2);
+}
+button:last-child:hover{
+    background-color: var(--yellow2);
+    border: 2px solid var(--yellow2);
+}
+.imgs{
+    display: none;
+}
+.hobbies ul{
+    color: white;
+    text-align: left;
+}
+.hobbies{
+    padding-bottom: 20px;
+}
+.work{
+    color: var(--green);
+}
+.work span:first-child{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.work span:nth-child(2){
+    font-size: 1rem;
+}
+.work span{
+    font-size: 1rem;
+}
+.work span:last-child{
+    font-size: .8rem;
+}
+.main-section h2{
+    padding: 35px;
+}

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Quantico:400,700|Roboto:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+:root {
+    --black: rgb(30, 30, 30);  
+    --green: rgb(14, 61, 59);
+    --yellow: #ffd944;   
+    --yellow2: #f8c000;   
+    --gray: #102438;
+    --lightGray: rgb(244, 244, 244);
+    --white: #fff;
+    --padding: 100px 0;
+    --sucGreen: #198754;
+    --headings: 3rem;
+    --fontSize: 16px;
+    --transition: .3s ease;
+}
+/***************
+basic styles
+***************/
+html{
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--siva);
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Quantico', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    transition: var(--transition);
+}
+/* ul{
+    list-style: none;
+} */
+h2{
+    color: var(--yellow2);
+    padding: 30px ;
+    text-align: center;
+}
+header{
+    background:linear-gradient(rgba(30, 30, 30,.8),rgba(30, 30, 30,.8)) , url(https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80);
+    height: 15vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1:hover,
+header p:hover{
+    user-select: none;
+    transition: var(--transition);
+}
+h1{
+    color: var(--yellow2);
+    font-size: 4rem;
+}
+header p{
+    color: var(--yellow2);
+    font-size: 1.3rem;
+    font-family: 'Dancing Script', 'cursive';
+}
+header span{
+    font-size: 1.3rem;
+    font-family: 'Roboto',sans-serif;
+}
+main{
+    /* height: 100vh; */
+    display: flex;
+}
+aside{
+    flex: 0 0 35%;
+    background-color: var(--green);
+    text-align: center;
+    padding: 0 50px;
+}
+section{
+    flex: 0 0 65%;
+}
+.btn-success{
+    background-color: var(--sucGreen);
+    border: none;
+}
+.btn-success:hover{
+    background-color: var(--green);
+    transition: var(--transition);
+    color: whitesmoke !important;
+    border: none;
+}
+.profile{
+    color: white;
+    text-align: left;
+}
+
+.about p,
+.contact p {
+    color: var(--white);
+    text-align: justify;
+}
+aside i{
+    color: var(--yellow2);
+    font-size: 1.5rem;
+}
+aside a{
+    color: var(--white);
+    text-decoration: underline;
+}
+aside a:hover{
+    color: var(--yellow2);
+}
+
+.achDiv{
+    text-align: justify;
+    color: var(--white);
+}
+
+
+.main-section {
+    
+    /* background:linear-gradient(rgba(255, 255, 255,.85),rgba(255, 255, 255,85)), url(https://images.unsplash.com/photo-1472437774355-71ab6752b434?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80); */
+    /* background-position: left;
+    background-size: cover; */
+    background-color: var(--lightGray);
+    padding: 0 100px;
+}
+
+.fa-html5{
+    color: #dd4b25;
+}
+.fa-css3-alt{
+    color:#264de4 ;
+}
+.fa-bootstrap{
+    color:#8112fa ;
+}
+.fa-sass{
+    color:#c76494 ;
+}
+.fa-database{
+    color:#dd8a00 ;
+}
+.fa-wordpress{
+    color:#17698d ;
+}
+.fa-react{
+    color:#08daff ;
+}
+.fa-node{
+    color:var(--green) ;
+}
+.fa-php{
+    color:#7377ad ;
+}
+.fa-js-square{
+    color:#efd81d ;
+}
+.fa-funnel-dollar{
+    color:var(--green) ;
+}
+.fa-microsoft{
+    color: #e43a00 ;
+}
+.it{
+    display: flex;
+    justify-content: space-between;
+}
+.col-6 i{
+    font-size: 2rem;
+    flex: 0 0 13%;
+    margin-bottom: 15px;
+    
+}
+
+.it p{
+    text-align: left;
+    font-size: 1rem;
+    color: var(--green);
+    /* margin-top: 5px; */
+    font-weight: bold;
+}
+.it span{
+    font-size: .8rem    ;
+    font-weight: normal;
+}
+
+
+.skill li{
+    text-align: left !important;
+}
+.skill{
+    flex: 0 0 49%;
+    color: var(--green);
+}
+.skill h2{
+    text-align: center;
+}
+.imgs img{
+    box-shadow: 0 0 25px white;
+    transition: .4s ease;
+    /* width: 100px; */
+    height: 220px ;
+}
+.imgs img:hover{
+    transform: scale(2);
+}
+
+
+footer{
+    font-size: 15px;
+    height: 5vh;
+    padding-top: 9px;
+}
+/* .education{
+    margin-left: 5%;
+} */
+.education ul
+{
+    text-align: left;
+    list-style: outside;
+    /* font-weight: bold; */
+    color: var(--green);
+}
+.education li{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+ul span{
+    font-size: .8rem;
+    font-weight: normal;
+}
+.education ul span:last-child{
+    font-size: .9rem;
+    font-weight: bold;
+}
+.education a{
+    font-size: 1rem;
+}
+
+
+
+.languages span{
+    font-weight: bold;
+}
+button{
+    border: none;
+}
+button:last-child{
+    background-color: transparent;
+    border: 2px solid var(--yellow2);
+}
+button:last-child:hover{
+    background-color: var(--yellow2);
+    border: 2px solid var(--yellow2);
+}
+.imgs{
+    display: none;
+}
+.hobbies ul{
+    color: white;
+    text-align: left;
+}
+.hobbies{
+    padding-bottom: 20px;
+}
+.work{
+    color: var(--green);
+}
+.work span:first-child{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.work span:nth-child(2){
+    font-size: 1rem;
+}
+.work span{
+    font-size: 1rem;
+}
+.work span:last-child{
+    font-size: .8rem;
+}
+.main-section h2{
+    padding: 35px;
+}
+.job{
+    font-size: 1rem !important;
+}
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Andreja Stanimirovic</h1>
+        <!-- <p>future &nbsp; <span>JS + React developer</span></p>
+        <div class="d-flex">
+            <button class="read btn btn-success m-3">View CV</button>
+            <button class="gallery btn btn-success my-3">View Portfolio</button> -->
+        </div>
+    </header>
+    <main>
+        <aside>
+            <section class="about">
+                <h2>About me</h2>
+                <p>
+                    My whole life I have been asking myself the same question:
+                    "How would you imagine your dream job?" On my very first aptitude test, the guy on the other side
+                    said: "It is easy for you, you can be whatever you want". I was not sure if I understood. I thought
+                    he should tell me what future is the best future for me. Now, years later, I am sure I finally found myself
+                    in a world of FRONTEND development. I am conscientious, persistent and reliable person. When it is
+                    about coding I am very fast and proactive learner. I like team work, but I also do not mind working
+                    alone. Every day is a learning day for me.</p>
+            </section>
+            <article class="profile">
+                <h2>Profile</h2>
+                <div class="d-flex justify-content-between align-items-center">
+                    <ul>
+                        <li>Great motivation and teamwork skills</li>
+                        <li>Responsible and reliable</li>
+                        <li>Proactive</li>
+                        
+                    </ul>
+                    <ul>
+                        <li>Everything is goal subordinated</li>
+                        <li>Good Public speaker</li>
+                        <li>Strong personality</li>
+                    </ul>
+                </div>
+            </article>
+            <section class="contact text-center">
+                <h2>Contact</h2>
+                <div class="d-flex">
+                    <i class="fas fa-map-marker-alt mx-3"></i>
+                    <p>Vikend naselje Trebenje BB, 18204 Gornji Matejevac Nis, Serbia</p>
+                </div>
+                <div class="d-flex">
+                    <i class="far fa-envelope mx-3"></i>
+                    <p>andrejastanimirovic@gmail.com</p>
+                </div>
+                <div class="d-flex">
+                    <i class="fas fa-phone-alt mx-3"></i>
+                    <p>+381 64 143 9881</p>
+                </div>
+                <div class="d-flex">
+                    <i class="fab fa-linkedin-in mx-3"></i>
+                    <p><a href="https://www.linkedin.com/in/andrejast/">https://www.linkedin.com/in/andrejast/</a></p>
+                </div>
+                <div class="d-flex">
+                    <i class="fab fa-github mx-3"></i>
+                    <p><a href="https://github.com/dokolica018">https://github.com/dokolica018</a></p>
+                </div>
+            </section>
+            <section class="ach">
+                <h2>Achievements</h2>
+                <div class="achDiv">
+                    <p>"PROGRAMM OF PREPARATION YOUNG PEOPLE FOR
+                        SCIENTIFIC RESEARCH" - completed in organization of <a href="http://www.cknis.org.rs/">RED CROSS
+                            - Nis Serbia</a></p>
+                    <p>"METHODOLOGY OF INTRODUCTION TALENTED
+                        STUDENTS TO SCIENTIFIC RESEARCH" - completed in organization of <a
+                            href="http://www.cknis.org.rs/">RED CROSS - Nis Serbia</a></p>
+                </div>
+            </section>
+            <section class="hobbies">
+                <h2>Hobbies & Interests</h2>
+                <div class="d-flex justify-content-between">
+                    <ul>
+                        <li>Antique textile </li>
+                        <li>Street Art</li>
+                        <li>History & Bonton</li>
+                    </ul>
+                    <ul>
+                        <li>Mushroom collecting</li>
+                        <li>Gastronomy</li>
+                        <li>Somelierism</li>
+                    </ul>
+                </div>
+            </section>
+
+        </aside>
+        <section class="main-section">
+            <div class="imgs container text-center">
+                <div class="row img-row">
+                    
+                </div>
+            </div>
+            <div>
+                <article>
+                    <h2>IT skills</h2>
+                    <div class="it row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-html5"></i>
+                                <p>&nbsp;HTML5 - <span>Advanced</span></p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-css3-alt"></i>
+                                <p>&nbsp;CSS3 - <span>Advanced</span></p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-js-square"></i>
+                                <p>&nbsp;JAVASCRIPT - <span>Intermediate</span></p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-sass"></i>
+                                <p>&nbsp;SASS - <span>Advanced</span></p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-bootstrap"></i>
+                                <p>&nbsp;BOOTSTRAP - <span>Intermediate</span></p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-wordpress"></i>
+                                <p>&nbsp;WORDPRESS - <span>Intermediate</span></p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-react"></i>
+                                <p>&nbsp;REACT - <span>Basic</span></p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-node"></i>
+                                <p>&nbsp;NODE JS - <span>Basic</span></p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-php"></i>
+                                <p>&nbsp;PHP - <span>Basic</span></p>
+                            </div>
+                            <div class="d-flex align-items-center ">
+                                <i class="fas fa-database"></i>
+                                <p>&nbsp;MYSQL - <span>Basic</span></p>
+                            </div>
+                            <div class="d-flex align-items-center ">
+                                <i class="fas fa-funnel-dollar"></i>
+                                <p>&nbsp;DIGITAL MARKETING - <span>Basic</span></p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-microsoft"></i>
+                                <p>&nbsp;MICROSOFT OFFICE - <span>Basic</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="education">
+                    <h2>Education</h2>
+                    <ul>
+                        <li>Frontend Web Development (JS + REACT) - <a href="https://www.itbootcamp.rs/">IT Bootcamp</a><br> <span>July 2021. - October 2021. - </span><span>160 Hours</span></li>
+                        <li>Full Stack Web Development Course - <a href="https://www.danilovesovic.com/">Webcon</a> <br> <span>April 2021. - July 2021 - </span> <span>200 Hours</span> </li>
+                        <li>Complete Digital Marketing Course - <a href="https://www.masterbox.rs/">Masterbox</a> <br> <span>October 2019. - April 2019</span> <span>280 Hours</span> </li>
+                        <li>Bachelor's Degree in Journalism - <a href="https://intl.filfak.ni.ac.rs/en">Faculty of Philosophy </a> <br><span>October 2007. - October 2015 - </span> <span>243 ETC points earnded</span></li>
+                    </ul>
+                </article>
+                    <div class="work">
+                        <h2>Work Experience</h2>
+                        <ul>
+                            <li><span>Marketing Manager </span>
+                                <span>- "Balkan Kilims and Weavings DOO Nis" <br> Antique Textile Global Trading Company</span><br>
+                                <span>&nbsp;&nbsp;<span class="job">My job</span> is: 
+                                <ul>
+                                        <li>Comunication with antique textile collectors and dealers worldwide</li>
+                                        <li>Making contacts and negotiating sales</li>
+                                        <li>Social Media, Google and PR Managment</li>
+                                    </ul>
+                                </span>
+                                <span>October 2016. - January 2020.</span>
+                            </li>
+                            <li>
+                                <span>Owner and Manager </span>
+                                <span>- House of Leasure ("Kuca Dokolice") <br> Famous Antique Caffe Gallery in Nis, Serbia</span><br>
+                                <span><span class="job">My job</span> is: 
+                                    <ul>
+                                        <li>Organization of cultural and artistic exibitions</li>
+                                        <li>Promotion of street art and history in my town</li>
+                                        <li>Hiring empoyees</li>
+                                    </ul></span>
+                                <span>September 2012. - May 2016.</span>
+                            </li>
+                        </ul>
+                        </div>
+                </article>
+                <article class="languages">
+                    <h2>Languages</h2>
+                    <div class="d-flex justify-content-between">
+                        <p><span>English</span> - Fluent</p>
+                        <p><span>German</span> - Basic</p>
+                        <p><span>Serbian</span> - Native</p>
+                    </div>
+                </article>
+                    
+                <!-- <div class="d-flex justify-content-center text-center">
+                    <button class="read btn btn-success m-3 text-center">View CV</button>
+                    <button class="gallery btn btn-success my-3 text-center">View Portfolio</button>
+                </div> -->
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-dark text-white">
+        <p class="text-center">&copy;Andreja Stanimirovic 2021.</p>
+    </footer>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
