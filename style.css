@@ -17,6 +17,30 @@
 /***************
 basic styles
 ***************/
+button {
+    padding: 4px 20px;
+    border: none;
+    font-size: 1.1rem;
+    font-family: 'Quantico', sans-serif;
+    cursor: pointer;
+}
+.col-4{
+    flex: 0 0 30%;
+    text-align: center;
+}
+button:hover {
+    transition: var(--transition);
+}
+.read{
+    background-color: var(--green);
+    color: white;
+    border: 2px solid var(--green);
+}
+.gallery{
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--yellow2);
+}
 html{
     scroll-behavior: smooth;
 }
@@ -33,6 +57,7 @@ body {
 }
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Quantico', sans-serif;
+    margin-bottom: 0 !important;
 }
 a {
     text-decoration: none;
@@ -48,10 +73,19 @@ h2{
     padding: 30px ;
     text-align: center;
 }
+
+.dugmad .read{
+    background-color: var(--yellow2);
+    border: 2px solid var(--yellow2);
+}
+.dugmad .read:hover{
+    background-color: var(--green);
+    color: var(--yellow2);
+}
 header{
-    background:linear-gradient(rgba(30, 30, 30,.8),rgba(30, 30, 30,.8)) , url(https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80);
-    height: 15vh;
-    background-position: center;
+    background:linear-gradient(rgba(30, 30, 30,.8),rgba(30, 30, 30,.8)) , url('https://image.freepik.com/free-photo/coding-man_1098-18084.jpg');
+    height: 75vh;
+    background-position: top;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -65,7 +99,7 @@ header p:hover{
 }
 h1{
     color: var(--yellow2);
-    font-size: 4rem;
+    font-size: 7rem;
 }
 header p{
     color: var(--yellow2);
@@ -86,24 +120,17 @@ aside{
     text-align: center;
     padding: 0 50px;
 }
-section{
+.main-section{
     flex: 0 0 65%;
 }
-.btn-success{
-    background-color: var(--sucGreen);
-    border: none;
-}
-.btn-success:hover{
-    background-color: var(--green);
-    transition: var(--transition);
-    color: whitesmoke !important;
-    border: none;
-}
+
 .profile{
     color: white;
     text-align: left;
 }
-
+footer p{
+    padding:20px;
+}
 .about p,
 .contact p {
     color: var(--white);
@@ -125,7 +152,9 @@ aside a:hover{
     text-align: justify;
     color: var(--white);
 }
-
+.dugmad{
+    display: none !important; 
+}
 
 .main-section {
     
@@ -167,7 +196,7 @@ aside a:hover{
     color:#efd81d ;
 }
 .fa-funnel-dollar{
-    color:var(--green) ;
+    color: cadetblue ;
 }
 .fa-microsoft{
     color: #e43a00 ;
@@ -175,6 +204,9 @@ aside a:hover{
 .it{
     display: flex;
     justify-content: space-between;
+}
+.it .col-6{
+    flex: 0 0 50%;
 }
 .col-6 i{
     font-size: 2rem;
@@ -210,10 +242,14 @@ aside a:hover{
     box-shadow: 0 0 25px white;
     transition: .4s ease;
     /* width: 100px; */
-    height: 220px ;
+    height: 250px ;
 }
 .imgs img:hover{
-    transform: scale(2);
+    transform: scale(2.3);
+}
+.imgs h2{
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -222,9 +258,7 @@ footer{
     height: 5vh;
     padding-top: 9px;
 }
-/* .education{
-    margin-left: 5%;
-} */
+
 .education ul
 {
     text-align: left;
@@ -253,17 +287,7 @@ ul span{
 .languages span{
     font-weight: bold;
 }
-button{
-    border: none;
-}
-button:last-child{
-    background-color: transparent;
-    border: 2px solid var(--yellow2);
-}
-button:last-child:hover{
-    background-color: var(--yellow2);
-    border: 2px solid var(--yellow2);
-}
+
 .imgs{
     display: none;
 }
@@ -290,6 +314,181 @@ button:last-child:hover{
 .work span:last-child{
     font-size: .8rem;
 }
-.main-section h2{
-    padding: 35px;
+.languages{
+    color: var(--green);
+    /* margin-bottom: 20px; */
+}
+.dugme{
+    color: var(--yellow2);
+    background-color: transparent;
+    transition: var(--transition);
+}
+.gallery:hover{
+    background-color: var(--yellow2);
+    color: var(--black);
+    transition: var(--transition);
+}
+.read:hover{
+    background-color: var(--yellow2);
+    color: var(--black);
+    border: 2px solid var(--yellow2);
+    transition: var(--transition);
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+}
+.imgs{
+    margin: 40px 0;
+}
+.job{
+    font-size: 1rem !important;
+}
+@media(min-width:768px) and (max-width: 1440px){
+    body{
+        font-size: .9rem;
+    }
+}
+@media(max-width:767px){
+    header{
+        height: 40vh;
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+    header p{
+        font-size: .9rem;
+    }
+    header p span{
+        font-size: 1.1rem;
+    }
+    button{
+        font-size: .8rem;
+        margin: 0;
+    }
+    main{
+        flex-direction: column-reverse;
+    }
+    .container{
+        width: 80%;
+    }
+    h2{
+        padding: 20px;
+        margin: 0;
+        /* margin-top: 5px; */
+        font-size: 1.8rem;
+    }
+    aside{
+        padding: 0 16px ;
+    }
+    aside {
+        font-size: .85rem;
+    }
+    .profile-flex{
+        flex-direction: column;
+    }
+    aside i {
+        font-size: 1rem;
+    }
+    .main-section{
+        flex: 0 0 100% ;
+        padding: 0 16px;
+    }
+    .it .col-6{
+        flex: 0 0 100%;
+        justify-content: center;
+        padding-left: 30px;
+    }
+    .education li{
+        font-size: 1.1rem;
+    }
+
+    ul span{
+        font-size: .75rem;
+        font-weight: normal;
+    }
+    .education ul span:last-child{
+        font-size: .8rem;
+        font-weight: bold;
+    }
+    .education a{
+        font-size: .9rem;
+    }
+    .work span:first-child{
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    .work span:nth-child(2){
+        font-size: .8rem;
+    }
+    .work span{
+        font-size: .8rem;
+    }
+    .work span:last-child{
+        font-size: .75rem;
+    }
+    .job{
+        font-size: .8rem !important;
+    }
+    .span{
+        margin-bottom: 100px !important;
+    }
+
+    .lng{
+        font-size: .8rem;
+        /* flex-direction: column; */
+        padding: 0 16px;
+    }
+    footer{
+        font-size: .7rem;
+        padding: 10px;
+    }
+    footer p {
+        margin-top: 15px;
+    }
+    .imgs img{
+        box-shadow: 0 0 25px white;
+        transition: .4s ease;
+        margin: 0;
+
+    }
+    .imgs{
+        
+        margin: 0 !important;
+    }
+ 
+    .dugmad-donja{
+        padding-bottom: 20px;
+    }
+    .imgs h2{
+        margin-left: 50px;
+    }
+    .col-4:nth-child(8){
+        display: none;
+    }
+    .col-4:nth-child(11){
+        border: 2px solid red;
+        display: none;
+    }
+    .col-4:nth-child(9){
+        /* border: 2px solid red; */
+        display: none;
+    }
+    .col-4{
+        flex: 0 0 40%;
+        margin: 15px 0 !important;
+    }
+    .img-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    button{
+        padding: 4px 10px;
+    }
+    header p{
+        margin-bottom: 0;
+    }
 }

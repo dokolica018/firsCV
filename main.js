@@ -1,10 +1,11 @@
-let readBtn = document.querySelector('.read')
+let readBtns = document.querySelectorAll('.read')
 let main = document.querySelector('main')
 let imgRow = document.querySelector('.row')
 let imgs = document.querySelector('.imgs')
-let cv = document.querySelector('.cv')
-let galleryBtn = document.querySelector('.gallery')
+let cvs = document.querySelectorAll('.cv')
+let galleryBtns = document.querySelectorAll('.gallery')
 let container = document.querySelector('.container')
+let mainSection = document.querySelector('.main-section')
 let images = [
     'https://files.fm/thumb_show.php?i=stxsufttz',
     'https://files.fm/thumb_show.php?i=bbpbxa7nk',
@@ -23,21 +24,29 @@ let images = [
     'https://files.fm/thumb_show.php?i=h9cys69ep',
 ]
 
-
-readBtn.addEventListener('click',() => {
-    main.scrollIntoView()
-    cv.style.display = 'block'
-    imgs.style.display = 'none'
-})
-galleryBtn.addEventListener('click',() => {
-    main.scrollIntoView()
-    cv.style.display = 'none'
-    imgs.style.display = 'block'
+readBtns.forEach(readBtn => {
+    readBtn.addEventListener('click',() => {
+        mainSection.scrollIntoView()
+        cvs.forEach(cv => {
+            cv.style.display = 'block'
+        });
+        imgs.style.display = 'none'
+    })
+    
+});
+galleryBtns.forEach(galleryBtn => {
+    galleryBtn.addEventListener('click',() => {
+        mainSection.scrollIntoView()
+        cvs.forEach(cv => {
+            cv.style.display = 'none'
+        });
+        imgs.style.display = 'block'
+});
     
 })
 images.forEach(img => {
     imgRow.innerHTML+=`
-        <div class="col-4 my-3 img-fluid">
+        <div class="col-4 my-4  img-fluid slike">
             <img src="${img}" alt="">
         </div>
     `
